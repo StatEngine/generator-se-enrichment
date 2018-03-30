@@ -1,0 +1,15 @@
+# <%= humanName %>
+
+## Description
+
+<%= description %>
+
+## Installation
+
+Using npm:
+```
+npm install ProminentEdge/<%= repoName %>
+```
+
+## Tests
+To run the test suite, first install the dependencies, then run `npm test`.
