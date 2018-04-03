@@ -88,19 +88,28 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('README'),
       this.destinationPath(path.join(this.props.repoName, 'README.md')),
-      { repoName: this.props.repoName, humanName: this.props.name, description: this.props.description }
+      {
+        repoName: this.props.repoName,
+        humanName: this.props.name,
+        description: this.props.description
+      }
     );
 
     this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath(path.join(this.props.repoName, 'package.json')),
-      { repoName: this.props.repoName, description: this.props.description }
+      {
+        repoName: this.props.repoName,
+        className: this.props.className,
+        description: this.props.description,
+      }
     );
 
     this.fs.copyTpl(
       this.templatePath('test/test.js'),
       this.destinationPath(path.join(this.props.repoName, 'test/test.js')),
-      { className: this.props.className,
+      {
+        className: this.props.className,
         baseClass: this.props.baseClass,
         normalizedOutput: this.props.normalizedOutput,
       }
@@ -111,7 +120,8 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('src/index.js'),
       this.destinationPath(path.join(this.props.repoName, 'src/index.js')),
-      { className: this.props.className,
+      {
+        className: this.props.className,
         baseClass: this.props.baseClass,
         normalizedOutput: this.props.normalizedOutput,
       }

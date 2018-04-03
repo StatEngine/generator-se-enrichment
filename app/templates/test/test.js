@@ -2,11 +2,11 @@ import { expect } from 'chai';
 
 import Plugin from '../src';
 
-const P = Plugin();
+const Enrichment = Plugin();
 
 describe('<%= className %>', () => {
   it('should create Enrichment', () => {
-    const e = new P();
+    const e = new Enrichment();
     expect(e).to.be.an('object');
   });
 });

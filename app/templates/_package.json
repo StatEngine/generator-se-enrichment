@@ -1,5 +1,5 @@
 {
-  "name": "<%= repoName %>",
+  "name": "@statengine/<%= repoName %>",
   "version": "0.0.1",
   "description": "<%= description %>",
   "repository": "ProminentEdge/<%= repoName %>",
@@ -9,12 +9,17 @@
   "private": true,
   "scripts": {
     "lint": "node_modules/eslint/bin/eslint.js src/** test/**",
-    "test": "mocha --compilers js:babel-register ./test/*.js",
+    "test": "mocha --require babel-core/register ./test/*.js",
     "compile": "babel -d lib/ src/ --copy-files",
     "prepare": "npm run compile"
   },
   "dependencies": {
-    "se-enrichment-base": "StatEngine/se-enrichment-base"
+    "@statengine/se-enrichment-base": "StatEngine/se-enrichment-base"
+  },
+  "extensions": {
+    "statengine:ingest:enrichment": {
+      "<%= className %>": "./lib/index.js"
+    }
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
