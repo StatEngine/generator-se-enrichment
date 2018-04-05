@@ -8,7 +8,7 @@
 
 Using npm:
 ```
-npm install ProminentEdge/<%= repoName %>
+npm install @statengine/<%= repoName %>
 ```
 
 ## Tests

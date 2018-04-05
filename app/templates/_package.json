@@ -14,7 +14,7 @@
     "prepare": "npm run compile"
   },
   "dependencies": {
-    "@statengine/se-enrichment-base": "StatEngine/se-enrichment-base"
+    "@statengine/se-enrichment-base": "^0.0.1"
   },
   "extensions": {
     "statengine:ingest:enrichment": {
