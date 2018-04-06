@@ -1,6 +1,6 @@
 {
   "name": "generator-se-enrichment",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "StatEngine/generator-se-enrichment",
   "description": "Geneator for StatEngine enrichments",
   "license": "GPL-3.0",
